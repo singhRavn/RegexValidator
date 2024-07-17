@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vehicle List</title>
+</head>
+<body>
+	<h1>Vehicle List</h1>
+	<ul>
+		{% for vehicle in vehicles %}
+			<li>{{ vehicle }}</li>
+		{% empty %}
+			<li>No vehicles in the list.</li>
+		{% endfor %}
+	</ul>
+	<a href="{% url 'add_vehicle' %}">Add Vehicle</a>
+</body>
+</html>
